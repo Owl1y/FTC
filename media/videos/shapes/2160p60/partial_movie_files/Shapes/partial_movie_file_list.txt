@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/3215718966_152388259_2708378595.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_782070574_3928315237.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_1359481560_3928315237.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_764215425_3928315237.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_159772540_324688429.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_1113345799_2596484468.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_1168471059_3435710662.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/2160p60/partial_movie_files/Shapes/1111812733_2398200548_2135977735.mp4'

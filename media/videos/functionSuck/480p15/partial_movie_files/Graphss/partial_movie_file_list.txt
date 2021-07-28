@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/functionSuck/480p15/partial_movie_files/Graphss/3163782288_1913245774_194922411.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/functionSuck/480p15/partial_movie_files/Graphss/607903841_3192490714_969172242.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/functionSuck/480p15/partial_movie_files/Graphss/607903841_2325783152_333784744.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/functionSuck/480p15/partial_movie_files/Graphss/607903841_2058013304_4002996683.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/functionSuck/480p15/partial_movie_files/Graphss/607903841_259801942_3346095139.mp4'

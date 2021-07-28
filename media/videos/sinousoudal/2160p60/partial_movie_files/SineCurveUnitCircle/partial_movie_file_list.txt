@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/sinousoudal/2160p60/partial_movie_files/SineCurveUnitCircle/3215718966_469009858_2311157139.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/sinousoudal/2160p60/partial_movie_files/SineCurveUnitCircle/1111812733_1415574386_831359153.mp4'

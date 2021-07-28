@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/480p15/partial_movie_files/function/3163782288_2359251025_530939049.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/480p15/partial_movie_files/function/607903841_2398200548_1151589783.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/shapes/480p15/partial_movie_files/function/607903841_3812746515_4236848236.mp4'
