@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/3215718966_322158691_2235843313.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_2634659505_2235843313.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_1415574386_3012306032.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_3619412906_423426678.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_1415574386_1867859293.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_2523873336_3222613924.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_2250031725_3397941646.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_1415574386_1030320538.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_2594314299_3518498822.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function_of_d/2160p60/partial_movie_files/graphd/1111812733_1415574386_3699229906.mp4'

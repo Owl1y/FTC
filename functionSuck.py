@@ -14,11 +14,10 @@ class function(Scene):
         self.play(FadeOut(fx,worst))
         self.wait()
         self.play(FadeIn(gx))
-        self.play(Rotating(gx), run_time = 1)
         self.play(FadeOut(gx), run_time = 0.5)
         self.wait(2)
 
-class Graphss(Scene):
+"""class Graphss(Scene):
     def construct(self):
         axes = Axes(x_range=[-3,8],y_range=[-1,5])
         self.add(axes.add_coordinates())
@@ -54,4 +53,4 @@ class LineGraphExample(Scene):
             vertex_dot_style=dict(stroke_width=3,  fill_color=PURPLE),
             stroke_width = 4,
         )
-        self.add(plane, line_graph)
+        self.add(plane, line_graph)"""
