@@ -35,7 +35,7 @@ class graphd(Scene):
                 "numbers_with_elongated_ticks": np.arange(0, 10.01, 2),
             },
             tips=False)
-        graph_of_dt.add_coordinates()fil
+        graph_of_dt.add_coordinates()
 
 
 
@@ -50,8 +50,9 @@ class graphd(Scene):
         self.play(DrawBorderThenFill(graph_of_dt), Write(axis_labels), run_time= 2)
         self.wait()
         self.play(Create(graph), run_time = 2)
+        self.wait(4)
 
-#this shows how ass the function f(x) is and is way to abstract 
+#this shows how ass the function f(x) is and is way to abstract
 class graph_f_sucks(Scene):
     def construct(self):
 

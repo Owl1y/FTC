@@ -36,28 +36,24 @@ class graph_f_sucks(Scene):
                 #"numbers_with_elongated_ticks": np.arange(0, 10.01, 2),
             },
             tips = False)
-        #graph_of_f.add_coordinates()
 
         square = Square()
         fx = MathTex("f(x)")
         black_box = VGroup(square, fx)
+        whitebox = Square().set_fill(WHITE, opacity=1.0)
 
-
-        #graph_of_f.to_edge(UR)
         axis_labels = graph_of_f.get_axis_labels("x", "y")
 
 
-        graph = graph_of_f.get_graph(lambda x: x**2, x_range = [0,10], color = BLUE)
+
+        graph = graph_of_f.get_graph(lambda x: x**2, x_range = [0,10], color = BLUE)#lambda x: x**2
         graphing_stuff = VGroup(graph_of_f, graph, axis_labels, black_box).scale(0.5)
 
-        #self.play(FadeIn(backg_plane), run_time=6)
-        #self.play(backg_plane.animate.set_opacity(0.3))
-        #self.wait()
         self.play(FadeIn(black_box, target_position=graph_of_f))
         #LEFT*2.3 + DOWN*2.7
-        self.play(black_box.animate.shift(LEFT*2.3 + DOWN*2.5).scale(0.3), run_time=3)
+        self.play(Transform(black_box.animate.shift(LEFT*2.3 + DOWN*2.5).scale(0.3), whitebox), run_time=3)
         self.play(DrawBorderThenFill(graph_of_f), Write(axis_labels), run_time= 2)
         self.wait()
-
+        #self.play(Transform(black_box, whitebox))
         self.play(Create(graph),black_box.animate.shift(RIGHT*4.6), run_time = 2)
         self.wait()

@@ -5,7 +5,9 @@ class Shapes(Scene):
         circle = Circle().shift(LEFT)
         square = Square().shift(UP)
         triangle = Triangle().shift(RIGHT)
+        circ2 = Circle()
 
+        circ2.set_fill(PINK, opacity=0.5)
         circle.set_stroke(color=GREEN, width=20)
         square.set_fill(TEAL, opacity=1.0)
         triangle.set_fill(PINK, opacity=0.5)
@@ -15,11 +17,12 @@ class Shapes(Scene):
         self.play(ApplyMethod(circle.set_color, WHITE), run_time=0.5)
         self.play(ApplyMethod(circle.shift, UP), run_time=0.5)
         self.play(ApplyMethod(circle.shift, RIGHT), run_time=0.5)
+        self.play(Transform(circle, circ2))
         self.play(Rotate(square, PI/4))
         self.play(Transform(circle, square))
         #self.play(FadeOut(circle))
         #self.play(FadeOut(square))
-        
+
         self.wait(1)
 
 class MobjectExample(Scene):
@@ -43,12 +46,12 @@ class MobjectExample(Scene):
         self.add(Dot(a.get_center()).set_color(BLUE).scale(2))
         self.add(Dot(a.point_from_proportion(0.5)).set_color(ORANGE).scale(2))
         self.add(*[Dot(x) for x in a.get_points()])
-        self.add(a) 
+        self.add(a)
 
 class function(Scene):
     def construct(self):
         fx = Tex(r"f(x)").scale(4)
-        gx = Tex(r"\xcancel{f(x)}") 
+        gx = Tex(r"\xcancel{f(x)}")
         self.play(FadeIn(fx))
         self.wait(1)
         self.play(FadeOut(fx))
