@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function/480p15/partial_movie_files/graph_f_sucks/3163782288_769474181_2235843313.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function/480p15/partial_movie_files/graph_f_sucks/607903841_3935496015_2235843313.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function/480p15/partial_movie_files/graph_f_sucks/607903841_1625031925_2661561633.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function/480p15/partial_movie_files/graph_f_sucks/1495979052_2500646527_3166440484.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function/480p15/partial_movie_files/graph_f_sucks/607903841_2872453513_3570082357.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/function/480p15/partial_movie_files/graph_f_sucks/607903841_1415574386_4188767018.mp4'

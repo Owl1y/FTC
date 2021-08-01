@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/3163782288_2249343045_530939049.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/607903841_259801942_2391901694.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/607903841_1179729944_2420369673.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/607903841_1415574386_1257521775.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/607903841_2823448749_3890231824.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/607903841_1110085925_3890231824.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/function/607903841_259801942_1899211445.mp4'
