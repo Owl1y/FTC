@@ -1,4 +1,9 @@
 from manim import *
+import numpy as np
+import scipy.integrate as integrate
+
+
+
 
 class FunctionPlotWithLabelledYAxis(GraphScene):
     def __init__(self, **kwargs):
@@ -51,9 +56,64 @@ class graph_f_sucks(Scene):
 
         self.play(FadeIn(black_box, target_position=graph_of_f))
         #LEFT*2.3 + DOWN*2.7
-        self.play(Transform(black_box.animate.shift(LEFT*2.3 + DOWN*2.5).scale(0.3), whitebox), run_time=3)
+        self.play(black_box.animate.shift(LEFT*2.3 + DOWN*2.5).scale(0.3), run_time=3)
         self.play(DrawBorderThenFill(graph_of_f), Write(axis_labels), run_time= 2)
         self.wait()
-        #self.play(Transform(black_box, whitebox))
+        self.play(Transform(black_box, whitebox))
         self.play(Create(graph),black_box.animate.shift(RIGHT*4.6), run_time = 2)
         self.wait()
+
+class Inegral(Scene):
+    def construct(self):
+        self.show_function_graph()
+
+    def show_function_graph(self):
+        self.setup_axes(True)
+
+        def func(x):
+            return 0.1 * (x + -2 ) + (x - (-2)) * (x-5) + 5
+
+        graph = self.get_graph(func, x_min = 0.2, x_max = 9)
+        graph.set_color(YELLOW)
+        self.play(ShowCreation(graph), run_time=3)
+        self.wait(1)
+
+"""this is an integral animation i got from the manim discord"""
+class Graphs(Scene):
+
+    def construct(self):
+        axes = Axes(
+            x_range=[0,8],
+            y_range=[0,7],
+            axis_config = {
+                "color": WHITE,
+                "include_ticks": False,
+                },
+                tips = False)
+
+        #self.add(axes.add_coordinates())
+
+        self.play(Write(axes, lag_ratio = 0.01,run_time = 2))
+        t=ValueTracker(50)
+
+        interval = [4,6]
+        function = lambda x : 0.011*(x+5)*((x-3)**2) + 2
+        graph = axes.get_graph(function, color = BLUE)
+        label = axes.get_graph_label(graph, "f(x)")
+
+
+        self.play(Create(graph),FadeIn(label), lag_ratio = 0.01, run_time = 2)
+
+        rects = axes.get_area(graph,interval,dx_scaling=30)
+        rects.add_updater(lambda x: x.become(axes.get_area(graph, interval ,dx_scaling=t.get_value())))
+        self.play(Create(rects),run_time = 2)
+        self.play(t.animate(run_time=4,rate_func=linear).set_value(1))
+
+        answer = self.intg(4,6)
+
+        #self.play(Write(Tex(answer)))
+        self.wait(2)
+    def intg(self,a, b):
+
+        func = lambda x : 0.011*(x+5)*((x-3)**2) + 2
+        return (integrate.quad(func,a,b))[0]
