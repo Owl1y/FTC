@@ -1,6 +1,7 @@
-__pycache__ 
+__pycache__
 *.dvi
 *.aux
 *.log
 *.tex
 *.svg
+*.png
