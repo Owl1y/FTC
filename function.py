@@ -23,13 +23,13 @@ class FunctionPlotWithLabelledYAxis(GraphScene):
         self.add(dot,func_graph)
 
 
+
 class graph_f_sucks(Scene):
     def construct(self):
 
         backg_plane = NumberPlane(x_range=[0,10,1], y_range=[0,10,1])
         graph_of_f = Axes(
-            x_range = [0, 10, 1],
-            y_range = [0, 100, 1],
+            x_range = [0, 10, 1], y_range = [0, 100, 1],
             x_length = 10,
             y_length = 10,
             axis_config = {
@@ -45,41 +45,27 @@ class graph_f_sucks(Scene):
         square = Square()
         fx = MathTex("f(x)")
         black_box = VGroup(square, fx)
-        whitebox = Square().set_fill(WHITE, opacity=1.0)
+        t=ValueTracker(0)
 
         axis_labels = graph_of_f.get_axis_labels("x", "y")
 
-
-
-        graph = graph_of_f.get_graph(lambda x: x**2, x_range = [0,10], color = BLUE)#lambda x: x**2
+        graph = graph_of_f.get_graph(lambda x: x**2, x_range = [0,10], color = BLUE)
         graphing_stuff = VGroup(graph_of_f, graph, axis_labels, black_box).scale(0.5)
+        line1 = always_redraw(lambda:graph_of_f.get_vertical_line(graph_of_f.i2gp(t.get_value(), graph), color=YELLOW))
 
         self.play(FadeIn(black_box, target_position=graph_of_f))
         #LEFT*2.3 + DOWN*2.7
         self.play(black_box.animate.shift(LEFT*2.3 + DOWN*2.5).scale(0.3), run_time=3)
         self.play(DrawBorderThenFill(graph_of_f), Write(axis_labels), run_time= 2)
         self.wait()
-        self.play(Transform(black_box, whitebox))
         self.play(Create(graph),black_box.animate.shift(RIGHT*4.6), run_time = 2)
+        self.play(Write(line1))
         self.wait()
 
-class Inegral(Scene):
-    def construct(self):
-        self.show_function_graph()
 
-    def show_function_graph(self):
-        self.setup_axes(True)
-
-        def func(x):
-            return 0.1 * (x + -2 ) + (x - (-2)) * (x-5) + 5
-
-        graph = self.get_graph(func, x_min = 0.2, x_max = 9)
-        graph.set_color(YELLOW)
-        self.play(ShowCreation(graph), run_time=3)
-        self.wait(1)
 
 """this is an integral animation i got from the manim discord"""
-class Graphs(Scene):
+class integral(Scene):
 
     def construct(self):
         axes = Axes(
@@ -87,8 +73,9 @@ class Graphs(Scene):
             y_range=[0,7],
             axis_config = {
                 "color": WHITE,
-                "include_ticks": False,
+                "include_ticks": False
                 },
+                #x_axis_config={"numbers_to_include": [4, 6]},
                 tips = False)
 
         #self.add(axes.add_coordinates())
@@ -96,19 +83,20 @@ class Graphs(Scene):
         self.play(Write(axes, lag_ratio = 0.01,run_time = 2))
         t=ValueTracker(50)
 
-        interval = [4,6]
+        interval = [0,8]
         function = lambda x : 0.011*(x+5)*((x-3)**2) + 2
         graph = axes.get_graph(function, color = BLUE)
         label = axes.get_graph_label(graph, "f(x)")
 
 
         self.play(Create(graph),FadeIn(label), lag_ratio = 0.01, run_time = 2)
+        #line1 =  always_redraw(lambda:axes.get_vertical_line(axes.i2gp(t.get_value(), graph), color=YELLOW))
 
         rects = axes.get_area(graph,interval,dx_scaling=30)
         rects.add_updater(lambda x: x.become(axes.get_area(graph, interval ,dx_scaling=t.get_value())))
         self.play(Create(rects),run_time = 2)
         self.play(t.animate(run_time=4,rate_func=linear).set_value(1))
-
+        #self.add(add_x_labels)
         answer = self.intg(4,6)
 
         #self.play(Write(Tex(answer)))
@@ -117,3 +105,10 @@ class Graphs(Scene):
 
         func = lambda x : 0.011*(x+5)*((x-3)**2) + 2
         return (integrate.quad(func,a,b))[0]
+
+
+class Secintegral(Scene):
+    def construct(self):
+
+
+

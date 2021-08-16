@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/integral/3163782288_4153692500_3771361604.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/integral/2201830969_3507674531_3598587837.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/integral/2201830969_1168268340_2994551277.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/integral/2201830969_4114235341_3036655193.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/FTC/480p15/partial_movie_files/integral/2201830969_782919469_3120295668.mp4'

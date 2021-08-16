@@ -31,11 +31,11 @@ class SineCurveUnitCircle(Scene):
     # contributed by heejin_park, https://infograph.tistory.com/230
     def construct(self):
         self.show_axis()
-        self.show_circle()
+        #self.show_circle()
         self.move_dot_and_draw_curve()
         self.wait()
 
-   # def show_axis(self):
+    def show_axis(self):
         x_start = np.array([-6,0,0])
         x_end = np.array([6,0,0])
 
@@ -51,23 +51,23 @@ class SineCurveUnitCircle(Scene):
         self.origin_point = np.array([-4,0,0])
         self.curve_start = np.array([-3,0,0])
 
- #   def add_x_labels(self):
+    def add_x_labels(self):
         x_labels = [
-            MathTex("\pi"), MathTex("2 \pi"),
-            MathTex("3 \pi"), MathTex("4 \pi"),
+            MathTex("a"), MathTex("2"),
+            MathTex("1"), MathTex("b"),
         ]
 
         for i in range(len(x_labels)):
             x_labels[i].next_to(np.array([-1 + 2*i, 0, 0]), DOWN)
             self.add(x_labels[i])
 
-  #  def show_circle(self):
+    def show_circle(self):
         circle = Circle(radius=1)
         circle.move_to(self.origin_point)
         self.add(circle)
         self.circle = circle
 
-  #  def move_dot_and_draw_curve(self):
+    def move_dot_and_draw_curve(self):
         orbit = self.circle
         origin_point = self.origin_point
 
@@ -138,4 +138,67 @@ class Shapes(Scene):
 
         self.wait(1)
 
-        
+
+class firstL(Scene):
+    def construct(self):
+       tex = Tex(r"x")
+       self.add(tex.scale(8))
+
+class secondL(Scene):
+    def construct(self):
+       tex = Tex(r"b")
+       self.add(tex.scale(8))
+
+class limit(Scene):
+    def construct(self):
+       tex = Tex(r"x+h")
+       self.add(tex.scale(8))
+
+class mathtexts(Scene):
+    def construct(self):
+       tex = Tex(r"x+h")
+       tex1 = MathTex(r"A(x) = \int_{a}^{x}f(t) dt") 
+       tex2 = MathTex(r"A'(x) = \lim_{h \to 0} \frac{A(x+h) - A(x)}{h}") 
+       tex3 = MathTex(r"\lim_{h \to 0} \frac{\int_{a}^{x+h}f(t) dt - \int_{a}^{x}f(t)dt}{h}")
+       tex4 = MathTex(r"\lim_{h \to 0} \int_{x}^{x+h}f(t) dt")
+       tex5 = MathTex(r"\int_{a}^{x + h}f(t) dt - \int_{a}^{x}f(t) dt")
+       tex6 = MathTex(r"f(x) * h") 
+       tex7 = MathTex(r"\frac{f(x) * h}{h}")
+       tex8 = MathTex(r"\lim_{h \to 0} \frac{f(x) * h}{h}")
+
+       self.add(tex8.scale(2))
+
+
+"""this is an integral animation i got from the manim discord"""
+class empty_integral(Scene):
+    def construct(self):
+        axes = Axes(
+            x_range=[0,8],
+            y_range=[0,7],
+            axis_config = {
+                "color": WHITE,
+                "include_ticks": False
+                },
+                #x_axis_config={"numbers_to_include": [4, 6]},
+                tips = False)
+      
+        self.play(Write(axes, lag_ratio = 0.01,run_time = 2))
+        t=ValueTracker(50)
+
+        interval = [0,8]
+        function = lambda x : 0.011*(x+5)*((x-3)**2) + 2
+        graph = axes.get_graph(function, color = BLUE)
+        label = axes.get_graph_label(graph, "f(x)")
+
+
+        self.play(Create(graph), lag_ratio = 0.01, run_time = 2)
+        self.wait(3)
+ 
+
+
+
+
+
+
+
+

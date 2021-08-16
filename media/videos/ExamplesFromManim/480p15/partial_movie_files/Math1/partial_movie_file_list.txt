@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/a/Documents/cojects/FTC/media/videos/ExamplesFromManim/480p15/partial_movie_files/Math1/3163782288_578333088_1977693610.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/ExamplesFromManim/480p15/partial_movie_files/Math1/607903841_486784030_260893947.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/ExamplesFromManim/480p15/partial_movie_files/Math1/607903841_765895128_3881051265.mp4'
+file 'file:/home/a/Documents/cojects/FTC/media/videos/ExamplesFromManim/480p15/partial_movie_files/Math1/607903841_311132250_2876866692.mp4'
